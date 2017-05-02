@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`advanced cells 1 1`] = `
+Array [
+  Array [
+    Object {
+      "cols": 3,
+      "inner": "test1",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test2",
+      "rows": 3,
+    },
+    Object {
+      "cols": 2,
+      "inner": "test3",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test4",
+      "rows": 2,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test5",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test6",
+      "rows": 1,
+    },
+  ],
+  Array [],
+  Array [],
+  Array [],
+]
+`;
+
+exports[`advanced cells 2 1`] = `
+Array [
+  Array [
+    Object {
+      "cols": 4,
+      "inner": "test1",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test2",
+      "rows": 2,
+    },
+    Object {
+      "cols": 3,
+      "inner": "test3",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test4",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test5",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test6",
+      "rows": 1,
+    },
+  ],
+  Array [],
+  Array [],
+]
+`;
+
+exports[`advanced cells 3 1`] = `
+Array [
+  Array [
+    Object {
+      "cols": 4,
+      "inner": "test1",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test2",
+      "rows": 3,
+    },
+    Object {
+      "cols": 3,
+      "inner": "test3",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test4",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test5",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test6",
+      "rows": 1,
+    },
+    Object {
+      "cols": 3,
+      "inner": "test7",
+      "rows": 1,
+    },
+  ],
+  Array [],
+  Array [],
+  Array [],
+]
+`;
+
+exports[`simple cells 1`] = `
+Array [
+  Array [
+    Object {
+      "cols": 2,
+      "inner": "test1",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test2",
+      "rows": 1,
+    },
+    Object {
+      "cols": 1,
+      "inner": "test3",
+      "rows": 1,
+    },
+  ],
+  Array [],
+]
+`;
