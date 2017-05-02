@@ -1,7 +1,66 @@
+html, head, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 table {
     border-collapse: collapse;
 }
 td {
     border: 1px solid #aaa;
     padding: 0.2em 0.4em;
+}
+
+.root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .toc {
+        flex: 0 1 300px;
+        overflow-y: auto;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 32px;
+            li {
+                list-style-type: none;
+
+                a {
+                    display: block;
+                    padding: 4px 16px;
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        background-color: #eee;
+                    }
+                }
+            }
+
+            li.namespace {
+                padding-top: 32px;
+                font-weight: 700;
+            }
+            li.type {
+                a {
+                    padding-left: 32px;
+                }
+            }
+        }
+    }
+    .main {
+        border-left: 1px #ccc solid;
+        padding-left: 16px;
+        flex: 1 1 auto;
+        overflow-y: auto;
+
+        .bottom-cover {
+            display: block;
+            height: 80%;
+        }
+    }
 }

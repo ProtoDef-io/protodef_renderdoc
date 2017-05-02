@@ -13,11 +13,32 @@ let md = new Remarkable();
 let root = document.getElementById("root");
 
 function Main({ data }) {
-    let nss = _.map(_.sortBy(data.namespaces, ns => ns.path), 
-                    ns => <Namespace key={ns.path} data={ns} />);
-    return <div>
-        {nss}
+    let ns_sorted = _.sortBy(data.namespaces, ns => ns.path);
+    let nss = _.map(ns_sorted, ns => <Namespace key={ns.path} data={ns} />);
+    return <div className="root">
+        <div className="toc"><TOC namespaces={ns_sorted} /></div>
+        <div className="main">
+            {nss}
+            <div className="bottom-cover"></div>
+        </div>
     </div>;
+}
+
+function  TOC({ namespaces }) {
+    return <ul>
+        {
+            _.map(namespaces, ns => {
+                return [
+                    <li className="namespace"><a>{ns.path}</a></li>,
+                    _.map(ns.types, type => {
+                        return <li className="type">
+                            <a href={"#" + type.path + type.name}>{type.name}</a>
+                        </li>;
+                    })
+                ];
+            })
+        }
+    </ul>;
 }
 
 function Namespace({ data }) {
@@ -35,7 +56,7 @@ function Type({ data }) {
     }
 
     return <div>
-        <h3>{data.name}</h3>
+        <h3 id={data.path + data.name}>{data.name}</h3>
         <Markdown content={data.doc} />
         {spec}
     </div>;
@@ -53,17 +74,15 @@ function Spec({ spec }) {
             let inner = col.inner;
             let res = null;
 
-            let parent_label = inner.parent_label && [inner.parent_label, <br/>];
-
             if (inner.type == "builtin") {
                 res = <div>
-                    {parent_label}
+                    {inner.parent_label && [inner.parent_label, <br/>]}
                     {inner.name}
                 </div>;
             } else if (inner.type == "path") {
                 res = <div>
-                    {parent_label}
-                    {inner.path}
+                    {inner.parent_label && [inner.parent_label, <br/>]}
+                    <a href={"#" + inner.path}>{inner.path}</a>
                 </div>;
             }
 
