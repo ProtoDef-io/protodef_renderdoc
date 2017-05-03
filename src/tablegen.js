@@ -114,8 +114,10 @@ export class TableCell {
     }
 
     rasterize(out, rowPos, colPos) {
-        // TODO: Optimize
-        _.each(this.cells, cell => cell.rasterize(out, rowPos, colPos));
+        if (rowPos >= this.rowPos && rowPos <= (this.rowPos + this.allocatedRows) 
+            && colPos >= this.colPos && colPos <= (this.colPos + this.allocatedCols)) {
+                _.each(this.cells, cell => cell.rasterize(out, rowPos, colPos));
+            }
     }
 
 }

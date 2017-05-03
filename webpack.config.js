@@ -23,5 +23,6 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         watchContentBase: true,
     },
-    devtool: "cheap-module-eval-source-map",
+    //devtool: "cheap-module-eval-source-map",
+    devtool: "cheap-module-source-map",
 };

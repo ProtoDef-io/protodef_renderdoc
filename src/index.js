@@ -59,6 +59,7 @@ function Type({ data }) {
         <h3 id={data.path + data.name}>{data.name}</h3>
         <Markdown content={data.doc} />
         {spec}
+        <hr/>
     </div>;
 }
 

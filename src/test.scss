@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 html, head, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Lato', sans-serif;
 }
 
 table {
@@ -54,7 +57,7 @@ td {
     }
     .main {
         border-left: 1px #ccc solid;
-        padding-left: 16px;
+        padding-left: 24px;
         flex: 1 1 auto;
         overflow-y: auto;
 
